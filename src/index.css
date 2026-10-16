@@ -1,0 +1,145 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --bg-base: #F7F4EE;
+    --bg-surface: #FFFFFF;
+    --bg-surface-elevated: #F9F7F1;
+    --ink-primary: #0B1F3A;
+    --ink-muted: #5A6B82;
+    --ink-subtle: #8A9BB0;
+    --border-subtle: #E6E2D8;
+    --border-strong: #D1CCBE;
+    
+    --accent-teal: #0FA3A3;
+    --accent-teal-subtle: rgba(15, 163, 163, 0.1);
+    --accent-coral: #FF6B5B;
+    --accent-coral-subtle: rgba(255, 107, 91, 0.12);
+    --accent-gold: #E6A817;
+    --accent-gold-subtle: rgba(230, 168, 23, 0.12);
+    --evidence-high: #1B8A5A;
+    --evidence-low: #B0623A;
+    --ai-indigo: #5B5BD6;
+    --ai-indigo-subtle: rgba(91, 91, 214, 0.1);
+  }
+
+  .dark {
+    --bg-base: #0B1F3A;
+    --bg-surface: #132A4A;
+    --bg-surface-elevated: #1A365D;
+    --ink-primary: #F7F4EE;
+    --ink-muted: #9FB2C9;
+    --ink-subtle: #71849D;
+    --border-subtle: #1E3D67;
+    --border-strong: #2A4F82;
+    
+    --accent-teal: #3DD6D0;
+    --accent-teal-subtle: rgba(61, 214, 208, 0.15);
+    --accent-coral: #FF8A7D;
+    --accent-coral-subtle: rgba(255, 138, 125, 0.18);
+    --accent-gold: #F2C14E;
+    --accent-gold-subtle: rgba(242, 193, 78, 0.15);
+    --evidence-high: #4ADE9A;
+    --evidence-low: #E89A6C;
+    --ai-indigo: #9A9AFF;
+    --ai-indigo-subtle: rgba(154, 154, 255, 0.18);
+  }
+
+  body {
+    background-color: var(--bg-base);
+    color: var(--ink-primary);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.5;
+  }
+
+  h1, h2, h3, .font-serif-medical {
+    font-family: 'Newsreader', Georgia, serif;
+    line-height: 1.25;
+  }
+
+  code, pre, .font-mono-code {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Custom Utilities for QUBITS Design Tokens */
+.bg-qubits-base {
+  background-color: var(--bg-base);
+}
+.bg-qubits-surface {
+  background-color: var(--bg-surface);
+}
+.bg-qubits-elevated {
+  background-color: var(--bg-surface-elevated);
+}
+.text-qubits-primary {
+  color: var(--ink-primary);
+}
+.text-qubits-muted {
+  color: var(--ink-muted);
+}
+.border-qubits {
+  border-color: var(--border-subtle);
+}
+.border-qubits-strong {
+  border-color: var(--border-strong);
+}
+
+.text-accent-teal {
+  color: var(--accent-teal);
+}
+.bg-accent-teal {
+  background-color: var(--accent-teal);
+}
+.border-accent-teal {
+  border-color: var(--accent-teal);
+}
+
+.text-accent-coral {
+  color: var(--accent-coral);
+}
+.bg-accent-coral {
+  background-color: var(--accent-coral);
+}
+.border-accent-coral {
+  border-color: var(--accent-coral);
+}
+
+.text-accent-gold {
+  color: var(--accent-gold);
+}
+.bg-accent-gold {
+  background-color: var(--accent-gold);
+}
+
+.text-evidence-high {
+  color: var(--evidence-high);
+}
+.text-evidence-low {
+  color: var(--evidence-low);
+}
+
+.text-ai-indigo {
+  color: var(--ai-indigo);
+}
+.bg-ai-indigo-subtle {
+  background-color: var(--ai-indigo-subtle);
+}
+
+/* Red Flag Ribbon Animation */
+@keyframes coralPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.85; }
+}
+.animate-coral-pulse {
+  animation: coralPulse 3s ease-in-out infinite;
+}
+
+/* Smooth Highlight Tooltip */
+::selection {
+  background: rgba(15, 163, 163, 0.25);
+  color: inherit;
+}

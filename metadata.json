@@ -1,0 +1,6 @@
+{
+  "name": "MedVindicate",
+  "description": "High-yield medical student learning platform with VINDICATE framework breakdowns, dual search, dual-year explanation toggle, interactive pathophysiologic flowcharts, and text-highlight flashcard generator with real-time sync.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
